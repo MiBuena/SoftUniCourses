@@ -1,5 +1,0 @@
-c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\03.Arrow\bin\Debug\03.Arrow.exe.config
-c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\03.Arrow\bin\Debug\03.Arrow.exe
-c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\03.Arrow\bin\Debug\03.Arrow.pdb
-c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\03.Arrow\obj\Debug\03.Arrow.exe
-c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\03.Arrow\obj\Debug\03.Arrow.pdb
