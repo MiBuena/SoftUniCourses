@@ -1,0 +1,6 @@
+c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\02.OddOrEvenElements\bin\Debug\02.OddOrEvenElements.exe.config
+c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\02.OddOrEvenElements\bin\Debug\02.OddOrEvenElements.exe
+c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\02.OddOrEvenElements\bin\Debug\02.OddOrEvenElements.pdb
+c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\02.OddOrEvenElements\obj\Debug\02.OddOrEvenElements.exe
+c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\02.OddOrEvenElements\obj\Debug\02.OddOrEvenElements.pdb
+c:\users\ff\documents\visual studio 2013\Projects\CSharpBasics1204\02.OddOrEvenElements\obj\Debug\02.OddOrEvenElements.csprojResolveAssemblyReference.cache
