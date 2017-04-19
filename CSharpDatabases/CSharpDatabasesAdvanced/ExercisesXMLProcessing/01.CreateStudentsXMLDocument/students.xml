@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<students>
+  <student name="Pesho" gender="f" PhoneNumber="0878283949">
+    <exams>
+      <exam examName="OOP" dateTaken="2016-01-01T00:00:00" grade="5.5" />
+      <exam examName="C#" dateTaken="2016-05-01T00:00:00" grade="10" />
+    </exams>
+  </student>
+</students>

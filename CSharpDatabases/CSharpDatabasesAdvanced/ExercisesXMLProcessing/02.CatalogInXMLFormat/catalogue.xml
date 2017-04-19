@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+  <albums>
+    <album name="The best album" artist="Jon Bon Jovi" price="20" producer="MM" year="2016">
+      <songs>
+        <song title="The best song" duration="PT2M20S" />
+        <song title="The second best song" duration="PT3M20S" />
+      </songs>
+    </album>
+    <album name="The second best album" artist="Lenux" price="30" producer="MM" year="2016">
+      <songs>
+        <song title="The best song" duration="PT2M20S" />
+        <song title="The second best song" duration="PT3M20S" />
+      </songs>
+    </album>
+    <album name="Third" artist="Lenux" price="30" producer="MM" year="2000">
+      <songs>
+        <song title="The best song" duration="PT2M20S" />
+        <song title="The second best song" duration="PT3M20S" />
+      </songs>
+    </album>
+  </albums>
+</catalog>
