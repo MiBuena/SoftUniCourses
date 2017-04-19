@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.AutoMapper", "01.AutoMapper\01.AutoMapper.csproj", "{866C7068-8AAB-4026-8072-9915C54EE074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SimpleMapping", "01.SimpleMapping\01.SimpleMapping.csproj", "{D9BB7708-88E9-4CC4-B022-C7A4D959D2CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.AdvancedMapping", "02.AdvancedMapping\02.AdvancedMapping.csproj", "{2AA9B1B5-97CB-4AC2-ADD4-E28D643C0A9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{866C7068-8AAB-4026-8072-9915C54EE074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866C7068-8AAB-4026-8072-9915C54EE074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866C7068-8AAB-4026-8072-9915C54EE074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866C7068-8AAB-4026-8072-9915C54EE074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9BB7708-88E9-4CC4-B022-C7A4D959D2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9BB7708-88E9-4CC4-B022-C7A4D959D2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9BB7708-88E9-4CC4-B022-C7A4D959D2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9BB7708-88E9-4CC4-B022-C7A4D959D2CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AA9B1B5-97CB-4AC2-ADD4-E28D643C0A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AA9B1B5-97CB-4AC2-ADD4-E28D643C0A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AA9B1B5-97CB-4AC2-ADD4-E28D643C0A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AA9B1B5-97CB-4AC2-ADD4-E28D643C0A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
