@@ -1,0 +1,122 @@
+﻿@using System.Collections
+@using System.Web.Mvc.Html
+@using LearningSystemApplication.Helpers
+@model IEnumerable<LearningSystem.Models.ViewModels.Courses.AllCoursesViewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<table class="table">
+    <tr>
+        <th>
+
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
+
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Description)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().TrainerName)
+        </th>
+
+        <th>
+
+            @Html.DisplayNameFor(model => model.FirstOrDefault().StartDate)
+        </th>
+
+        <th>
+
+            @Html.DisplayNameFor(model => model.FirstOrDefault().EndDate)
+        </th>
+
+        <th>
+
+            @Html.DisplayNameFor(model => model.FirstOrDefault().StudentsCount)
+        </th>
+
+        <th><p>Enroll</p> </th>
+
+        @if (User.IsInRole("Administrator"))
+        {
+            <th>
+                <p>Edit Course</p>
+            </th>
+        }
+
+    </tr>
+
+
+
+    @foreach (var course in this.Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => course.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => course.Description)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => course.TrainerName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => course.StartDate)
+            </td>
+
+            <td>
+
+                @Html.DisplayFor(model => course.EndDate)
+            </td>
+            <td align="center">
+
+                @Html.DisplayFor(model => course.StudentsCount, new
+                {
+                    htmlAttributes = new {@class = "form-control", @type = "date"}
+                })
+            </td>
+
+            @if (course.CanStudentsSignInAndOut)
+            {
+                if (course.HasCurrentUserEnrolledForThisCourse)
+                {
+                    <td>
+                        @Html.ActionLink("SignOut", "SignOut", "Course", new { courseId = course.Id }, null)
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.ActionLink("SignUp", "SignUp", "Course", new { courseId = course.Id }, null)
+                    </td>
+                }
+                
+            }
+            else
+            {
+                <td>
+            Course is not open for enrollment.
+                    </td>
+            }
+
+            @if (User.IsInRole("Administrator"))
+            {
+<td>
+                    @Html.ActionLink("EditCourse", "Edit", "Admin", new { courseId = course.Id, area = "Admin" }, null)
+                </td>
+            }
+
+
+
+
+        </tr>
+    }
+
+</table>
+

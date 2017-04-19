@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LearningSystem.Models.ViewModels.AllTrainersCoursesViewModel>
+
+
+@{
+    ViewBag.Title = "AllCourses";
+}
+
+<h2>AllCourses</h2>
+
+<table class="table">
+    <tr>
+        <th>
+
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
+
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Description)
+        </th>
+
+        <th>
+
+            @Html.DisplayNameFor(model => model.FirstOrDefault().StartDate)
+        </th>
+
+        <th>
+
+            @Html.DisplayNameFor(model => model.FirstOrDefault().EndDate)
+        </th>
+    </tr>
+
+
+
+    @foreach (var course in this.Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => course.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => course.Description)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => course.StartDate)
+            </td>
+
+            <td>
+
+                @Html.DisplayFor(model => course.EndDate)
+            </td>
+
+            <td>
+                @Html.ActionLink("Assess students in course", "AssessStudents", new { courseId = course.Id}, null)
+            </td>
+
+        </tr>
+    }
+
+</table>
+

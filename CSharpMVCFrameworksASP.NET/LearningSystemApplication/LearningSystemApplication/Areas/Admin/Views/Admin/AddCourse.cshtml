@@ -1,0 +1,86 @@
+﻿@model LearningSystem.Models.ViewModels.Courses.AddNewCourseViewModel
+@{
+    ViewBag.Title = "AddCourse";
+}
+
+<h2>AddCourse</h2>
+
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>
+                @Html.LabelFor(x => x.Name)
+            </th>
+
+            <td>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
+
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.LabelFor(model => model.Description)
+            </th>
+
+            <td>
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                @Html.LabelFor(model => model.StartDate)
+            </th>
+
+            <td>
+                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+
+
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                @Html.LabelFor(model => model.EndDate)
+            </th>
+
+            <td>
+                @Html.EditorFor(model => model.EndDate, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+
+
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                @Html.LabelFor(model => model)
+            </th>
+
+            <td>
+                @Html.DropDownList("TrainerId",
+                new SelectList(@Model.TrainerViewModels,
+                    "Id", "Name"), "Select Trainer", new { htmlAttributes = new { @class = "form-control"} })
+
+            </td>
+        </tr>
+
+
+
+    </table>
+
+    <div class="form-group">
+        <input type="submit">
+    </div>
+
+}
+
+
+

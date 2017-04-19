@@ -1,0 +1,87 @@
+﻿@model LearningSystem.Models.ViewModels.Courses.EditCourseViewModel
+@{
+    ViewBag.Title = "AddCourse";
+}
+
+<h2>AddCourse</h2>
+
+
+@using (Html.BeginForm())
+{
+
+    @Html.HiddenFor(x=>x.Id)
+
+        <table>
+        <tr>
+            <th>
+                @Html.LabelFor(x => x.Name)
+            </th>
+
+            <td>
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
+
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.LabelFor(model => model.Description)
+            </th>
+
+            <td>
+                @Html.EditorFor(model => model.Description)
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+
+            </td>
+        </tr>
+
+        <tr>
+            <th>
+                @Html.LabelFor(model => model.StartDate)
+            </th>
+
+            <td>
+                @Html.EditorFor(model => model.StartDate, new { htmlAttributes = new { @class = "form-control", @type = "date", @value = this.Model.StartDate } })
+                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+
+
+            <tr>
+                <th>
+                    @Html.LabelFor(model => model.EndDate)
+                </th>
+
+                <td>
+                    @Html.EditorFor(model => model.EndDate, new {htmlAttributes = new {@class = "form-control", @type = "date", @value = this.Model.EndDate}})
+                    @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    @Html.LabelFor(model => model.TrainerId)
+                </th>
+
+                <td>
+                    @Html.DropDownList("TrainerId",
+                new SelectList(@Model.AllTrainersViewModels,
+                    "Id", "Name"), "Select Trainer"))
+                </td>
+            </tr>
+
+
+
+        </table>
+
+    <div class="form-group">
+        <input type="submit">
+    </div>
+
+}
+
+
+

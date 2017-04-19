@@ -1,0 +1,65 @@
+﻿@model IEnumerable<LearningSystem.Models.ViewModels.AllArticlesViewModel>
+
+
+@{
+    ViewBag.Title = "All";
+}
+
+<h2>All articles</h2>
+
+@if (this.User.IsInRole("BlogAuthor"))
+{
+    @Html.ActionLink("Create new article", "Publish")
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Title)
+
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Content)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().PublishDate)
+        </th>
+
+        <th>
+
+            @Html.DisplayNameFor(model => model.FirstOrDefault().AuthorName)
+        </th>
+
+    </tr>
+
+
+
+    @foreach (var article in this.Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => article.Title)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => article.Content)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => article.PublishDate)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => article.AuthorName)
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+

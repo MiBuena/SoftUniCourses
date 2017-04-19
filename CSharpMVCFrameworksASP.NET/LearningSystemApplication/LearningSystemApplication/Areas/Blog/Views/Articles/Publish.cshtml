@@ -1,0 +1,32 @@
+﻿@using System.Web.Mvc.Html
+@model LearningSystem.Models.ViewModels.NewArticleViewModel
+@{
+    ViewBag.Title = "Publish";
+}
+
+<h2>Publish</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model=>model.Id)
+
+    <p>
+        @Html.LabelFor(model => model.Title)
+        @Html.TextBoxFor(model => model.Title, "", new { @class = "form-control", @placeholder = "Enter title" })
+        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Content)
+        @Html.TextAreaFor(model => model.Content, new { @class = "form-control", @placeholder = "Enter content" })
+        @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+    </p>
+    <div class="form-group">
+        <input type="submit">
+    </div>
+
+}
+
+
+
+

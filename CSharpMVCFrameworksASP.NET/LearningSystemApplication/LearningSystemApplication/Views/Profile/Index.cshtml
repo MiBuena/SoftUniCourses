@@ -1,0 +1,45 @@
+﻿@model LearningSystem.Models.ViewModels.ProfileViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Edit profile", "Edit")
+
+<p>User:</p>
+@this.Model.Name
+
+<p>Courses:</p>
+<table class="table">
+    <tr>
+        <th>
+
+            @Html.DisplayNameFor(model => model.Grades.FirstOrDefault().Course.Name)
+
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Grades.FirstOrDefault().Grade)
+        </th>
+
+    </tr>
+
+
+
+    @foreach (var grade in this.Model.Grades)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => grade.Course.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => grade.Grade)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
